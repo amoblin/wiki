@@ -1,0 +1,74 @@
+#+TITLE: ios-dev
+#+AUTHOR: amoblin
+#+EMAIL: amoblin@gmail.com
+#+DATE: 2014-06-16 14:54:15
+#+OPTIONS: ^:{}
+
+* 安装迅雷Store
+#+BEGIN_SRC sh
+http://down.sandai.net/mac/ThunderStore2.6.3.1576.dmg
+#+END_SRC
+* 安装Homebrew
+#+BEGIN_SRC sh
+ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+#+END_SRC
+* 安装Cocoapods
+#+BEGIN_SRC sh
+sudo gem install cocoapods
+#+END_SRC
+#+BEGIN_SRC sh
+pod init
+#+END_SRC
+* 安装Xcode插件
+http://www.cocoachina.com/applenews/devnews/2014/0506/8325.html
+** Alcatraz 插件管理工具
+** XVim
+** BBUFullIssueNavigator  为Issue Navigator处添加换行符
+** XcodeColors   为调试控制台添加ANSI颜色支持
+** XAlign 代码格式化
+** 代码颜色显示
+ColorSense for Xcode
+* 安装Node.js相关
+#+BEGIN_SRC sh
+brew install node
+#+END_SRC
+#+BEGIN_SRC sh
+npm install -g jade
+#+END_SRC
+jade在无线分发中用于生成HTML页面。
+* 系统工具配置
+#+BEGIN_SRC sh
+git clone https://github.com/amoblin/MyDotFiles
+#+END_SRC
+内含Emacs、Vim、Alias、Screen、Zsh、Git、Readline、Bash等的配置文件，仅供参考。
+* 安装git，配置项目
+#+BEGIN_SRC sh
+git clone https://github.com/amoblin/MyDotFiles.git
+#+END_SRC
+* 配置公私钥对
+#+BEGIN_SRC sh
+ssh-keygen -t rsa
+#+END_SRC
+把公钥通过QQ传给Git库管理员
+* 配置邮箱账号，JIRA账号
+* 克隆git库
+#+BEGIN_SRC sh
+git clone ...
+#+END_SRC
+* Git协同提交步骤
+#+BEGIN_SRC bash
+1. git stash
+2. git pull
+3. git stash pop（这里可能要处理冲突）
+4. git status
+5. git add -u
+6. git diff --cached
+7. git commit（这里我设置了2个git hooks：pre-commit和prepare-commit-msg。前者会做一些自动更新文件的工作，后者会自动添加一些信息到commit里去）
+8. git log 确认一下
+9. 没问题就 git push
+#+END_SRC
+附上2个git hooks的链接： https://github.com/amoblin/MyDotFiles/tree/master/git-hooks
+* 更新Wiki库
+#+BEGIN_SRC sh
+git clone git@sun:wiki.git
+#+END_SRC
