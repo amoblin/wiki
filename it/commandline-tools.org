@@ -1,0 +1,11 @@
+#+TITLE: commandline-tool
+#+AUTHOR: amoblin
+#+EMAIL: amoblin@gmail.com
+#+DATE: <2014-11-03 15:58:04>
+#+OPTIONS: ^:{}
+
+* 使用Zsh
+** 安装
+** 配置使用oh-my-zsh
+** 额外配置
+* 使用Tmux
