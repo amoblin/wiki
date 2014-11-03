@@ -31,6 +31,10 @@
 * [Git指南](it/git-guide)
 * [科学上网，访问不能正常访问的网站](it/switchy-sharp/)
 
+
+## 参考链接
+* [开源技术书籍列表](https://github.com/amoblin/CCBooks)
+
 ----------------------
 
 克隆Git库到本地(假定主机名为sun)：

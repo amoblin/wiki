@@ -1,0 +1,16 @@
+#+TITLE: Gollum Wiki 部署
+#+AUTHOR: amoblin
+#+EMAIL: amoblin@gmail.com
+#+DATE: <2014-11-03 16:16:19>
+#+OPTIONS: ^:{}
+
+* 安装
+#+BEGIN_SRC sh
+sudo gem install gollum
+#+END_SRC
+
+* 配置org-mode支持
+#+BEGIN_SRC sh
+gem install org-ruby
+#+END_SRC
+
