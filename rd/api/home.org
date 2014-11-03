@@ -1,0 +1,11 @@
+#+TITLE: API文档工具配置
+#+AUTHOR: amoblin
+#+EMAIL: amoblin@gmail.com
+#+DATE: <2014-11-03 15:54:34>
+#+OPTIONS: ^:{}
+
+* 安装aglio
+#+BEGIN_SRC sh
+npm install -g aglio
+#+END_SRC
+

@@ -8,6 +8,7 @@
 ## 技术
 ### 数据接口
 * [API文档](rd/api.html)
+* [API文档生成工具配置](rd/api/)
 
 ### iOS
 * [iOS开发配置](rd/iOS/ios-dev)
@@ -25,9 +26,10 @@
 * [服务器命名规范](operations/nameit)
 
 ## IT
+* [命令行配置指南](it/commandline-tools)
 * [Markdown指南](it/markdown-guide)
 * [Git指南](it/git-guide)
-* [科学上网，访问不能正常访问的网站](it/switchy-sharp)
+* [科学上网，访问不能正常访问的网站](it/switchy-sharp/)
 
 ----------------------
 
