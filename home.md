@@ -1,5 +1,6 @@
 # Wiki
 ## 唯有记下，不会忘记
+(本wiki Github地址： https://github.com/amoblin/wiki )
 
 ## 产品
 
@@ -37,8 +38,8 @@
 
 ----------------------
 
-克隆Git库到本地(假定主机名为sun)：
+克隆Git库到本地
 
 ``` sh
-git clone git@sun:wiki.git
+git clone https://github.com/amoblin/wiki
 ```
