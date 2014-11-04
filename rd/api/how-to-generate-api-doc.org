@@ -8,4 +8,7 @@
 #+BEGIN_SRC sh
 npm install -g aglio
 #+END_SRC
-
+* 使用Jade模板来生成API文档
+#+BEGIN_SRC sh
+aglio -t templates/default.jade -i api.apib -o ../api.html
+#+END_SRC
