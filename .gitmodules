@@ -1,3 +1,3 @@
-[submodule "rd/ios/install"]
-	path = rd/ios/install
+[submodule "rd/iOS/install"]
+	path = rd/iOS/install
 	url = https://github.com/amoblin/SimpleHTTPSServer.git
