@@ -12,11 +12,11 @@
 * [API文档生成工具配置](rd/api/how-to-generate-api-doc)
 
 ### [iOS](rd/ios/)
-* [每日构建安装包](rd/ios/install/)
+* [每日构建安装包](https://tf.marboo.biz)
 * [iOS开发配置](rd/ios/ios-dev)
 
 ### [Android](rd/android/)
-* [每日构建安装包](rd/android/install/)
+* [每日构建安装包](https://tf.marboo.biz)
 * [Android 编码规范](rd/android)
 
 ## [人事](hr/)
