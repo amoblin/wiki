@@ -6,6 +6,48 @@
 
 * 使用Zsh
 ** 安装
+#+BEGIN_SRC sh
+yum install zsh
+#+END_SRC
 ** 配置使用oh-my-zsh
+https://github.com/robbyrussell/oh-my-zsh
+#+BEGIN_SRC sh
+curl -L http://install.ohmyz.sh | sh
+#+END_SRC
 ** 额外配置
-* 使用Tmux
+* 使用Tmux 1.9a
+CentOS 6.5下默认tmux版本为1.6，不支持分屏功能，所以我们编译安装最新版本1.9a。
+** 安装依赖libevent 2.0
+#+BEGIN_SRC sh
+wget https://github.com/downloads/libevent/libevent/libevent-2.0.21-stable.tar.gz
+#+END_SRC
+** 编译安装tmux 1.9a
+#+BEGIN_SRC sh
+wget http://downloads.sourceforge.net/tmux/tmux-1.9a.tar.gz
+#+END_SRC
+
+注意编译时参数：
+#+BEGIN_SRC sh
+CFLAGS="-I/usr/local/include" LDFLAGS="-L//usr/local/lib" ./configure
+#+END_SRC
+
+运行时动态库可能找不到，需要如下设置：
+#+BEGIN_SRC sh
+if [ `getconf WORD_BIT` = '32' ] && [ `getconf LONG_BIT` = '64' ] ; then
+    ln -s /usr/local/lib/libevent-2.0.so.5 /usr/lib64/libevent-2.0.so.5
+else
+    ln -s /usr/local/lib/libevent-2.0.so.5 /usr/lib/libevent-2.0.so.5
+fi
+#+END_SRC
+
+参考： http://blog.linuxeye.com/323.html
+* 系统工具配置
+#+BEGIN_SRC sh
+git clone https://github.com/amoblin/MyDotFiles
+#+END_SRC
+内含Emacs、Vim、Screen、Tmux、Zsh、Bash、Git、Readline、Alias等的配置文件，仅供参考。
+* 配置公私钥对
+#+BEGIN_SRC sh
+ssh-keygen -t rsa
+#+END_SRC
+把公钥传给Git库管理员

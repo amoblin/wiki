@@ -28,13 +28,8 @@
 * [服务器命名规范](op/nameit)
 
 ## [IT](it/)
-* [命令行配置指南](it/commandline-tools)
 * [Markdown指南](it/markdown-guide)
-* [Git指南](it/git-guide)
 * [科学上网，访问不能正常访问的网站](it/switchy-sharp/)
-
-## 参考链接
-* [开源技术书籍列表](https://github.com/amoblin/CCBooks)
 
 ----------------------
 

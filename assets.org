@@ -1,0 +1,12 @@
+#+TITLE: assets
+#+AUTHOR: amoblin
+#+EMAIL: amoblin@gmail.com
+#+DATE: <2014-11-10 10:50:40>
+#+OPTIONS: ^:{}
+
+| 编号 | 品牌  | 型号        | 购买时间 | 用户       |
+|------+-------+-------------+----------+------------|
+|   00 | Apple | Mac mini    |          | 内网管理员 |
+|   01 | Apple | Macbook Pro |          | iOS开发    |
+|   02 | Apple | Macbook Pro |          |            |
+

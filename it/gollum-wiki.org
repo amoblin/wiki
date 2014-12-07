@@ -4,13 +4,48 @@
 #+DATE: <2014-11-03 16:16:19>
 #+OPTIONS: ^:{}
 
-* 安装
+* 升级系统级Ruby到1.9.3
+** 在git账户下安装rvm
+1. 先导入公钥，建立信任数据库
+#+BEGIN_SRC sh
+command curl -sSL https://rvm.io/mpapis/asc | gpg2 --mport -
+#+END_SRC
+2. 安装rvm
+#+BEGIN_SRC sh
+curl -sSL https://get.rvm.io | bash -s stable
+#+END_SRC
+** 安装ruby　1.9.3
+#+BEGIN_SRC sh
+rvm install 1.9.3
+#+END_SRC
+** 在git login账户下使用1.9.3
+#+BEGIN_SRC sh
+sudo su git --login
+#+END_SRC
+#+BEGIN_SRC sh
+rvm use 1.9.3 --default
+#+END_SRC
+* 使用淘宝源
+#+BEGIN_SRC sh
+gem sources --remove https://rubygems.org/
+gem sources -a http://ruby.taobao.org/
+#+END_SRC
+* 安装依赖icu
+Mac，Debian下：
+#+BEGIN_SRC sh
+icu required (brew install icu4c or apt-get install libicu-dev)
+#+END_SRC
+CentOS下：
+#+BEGIN_SRC sh
+yum install libicu-devel
+#+END_SRC
+* 安装Gollum(要求Ruby >=1.9.2)
 #+BEGIN_SRC sh
 sudo gem install gollum
 #+END_SRC
 
+参见 http://zodiac1111.github.io/blog/gollum-note/
 * 配置org-mode支持
 #+BEGIN_SRC sh
 gem install org-ruby
 #+END_SRC
-

@@ -1,0 +1,27 @@
+#+TITLE: gitolite
+#+AUTHOR: amoblin
+#+EMAIL: amoblin@gmail.com
+#+DATE: 2014-12-06 22:28:45
+#+OPTIONS: ^:{}
+
+#+REVEAL_ROOT: /media/lib/reveal.js-2.6.2
+#+REVEAL_TRANS: linear
+#+REVEAL_THEME: moon
+
+
+#+BEGIN_SRC sh
+git clone git://github.com/sitaramc/gitolite
+mkdir -p $HOME/bin
+gitolite/install -to $HOME/bin
+#+END_SRC
+
+#+BEGIN_SRC sh
+gitolite setup -pk YourName.pub
+#+END_SRC
+
+#+BEGIN_SRC sh
+git clone git@host:gitolite-admin
+#+END_SRC
+
+* 参考
+Github主页： https://github.com/sitaramc/gitolite
