@@ -1,4 +1,4 @@
-#+TITLE: gitolite
+#+TITLE: Gitolite服务器配置
 #+AUTHOR: amoblin
 #+EMAIL: amoblin@gmail.com
 #+DATE: 2014-12-06 22:28:45

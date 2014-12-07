@@ -1,4 +1,4 @@
-#+TITLE: commandline-tool
+#+TITLE: 命令行配置
 #+AUTHOR: amoblin
 #+EMAIL: amoblin@gmail.com
 #+DATE: <2014-11-03 15:58:04>

@@ -7,17 +7,7 @@
 * [Web原型图](pd/web/)
 
 ## [技术](rd/)
-### [数据接口](rd/api)
-* [API文档](rd/api.html)
-* [API文档生成工具配置](rd/api/how-to-generate-api-doc)
-
-### [iOS](rd/ios/)
 * [每日构建安装包](https://tf.marboo.biz)
-* [iOS开发配置](rd/ios/ios-dev)
-
-### [Android](rd/android/)
-* [每日构建安装包](https://tf.marboo.biz)
-* [Android 编码规范](rd/android)
 
 ## [人事](hr/)
 * [员工通讯簿](hr/contacts)
