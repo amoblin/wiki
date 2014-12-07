@@ -1,0 +1,34 @@
+#+TITLE: port-forward
+#+AUTHOR: amoblin
+#+EMAIL: amoblin@gmail.com
+#+DATE: 2014-12-07 11:03:26
+#+OPTIONS: ^:{}
+
+#+REVEAL_ROOT: /media/lib/reveal.js-2.6.2
+#+REVEAL_TRANS: linear
+#+REVEAL_THEME: moon
+
+配置：公网服务器一台，假设为123.123.123.123，内网服务器一台，假设为192.168.0.100
+预期目标：通过公网访问内网服务
+
+* 内网远程端口转发
+将内网22端口通过远程端口（公网本地端口）2222转发
+在内网服务器中执行如下命令：
+#+BEGIN_SRC sh
+ssh -NR 2222:localhost:22 123.123.123.123
+#+END_SRC
+
+* 公网端口本地转发
+在公网服务器中执行如下命令：
+#+BEGIN_SRC sh
+ssh -NL 123.123.123.123:2223:localhost:2222 123.123.123.123
+#+END_SRC
+
+* 开放2223端口
+#+BEGIN_SRC sh
+iptables -A INPUT -p tcp --dport 2223 -j ACCEPT
+#+END_SRC
+
+* 参考资料：
+- http://blog.creke.net/722.html
+- http://www.ruanyifeng.com/blog/2011/12/ssh_port_forwarding.html

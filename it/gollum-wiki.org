@@ -49,3 +49,6 @@ sudo gem install gollum
 #+BEGIN_SRC sh
 gem install org-ruby
 #+END_SRC
+* 参考
+- https://ruby.taobao.org
+- https://github.com/gollum/gollum
