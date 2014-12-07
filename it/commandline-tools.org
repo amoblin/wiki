@@ -21,10 +21,12 @@ CentOS 6.5下默认tmux版本为1.6，不支持分屏功能，所以我们编译
 #+BEGIN_SRC sh
 wget https://github.com/downloads/libevent/libevent/libevent-2.0.21-stable.tar.gz
 #+END_SRC
+或者本地下载： [[software/libevent-2.0.21-stable.tar.gz][libevent-2.0.21-stable.tar.gz]]
 ** 编译安装tmux 1.9a
 #+BEGIN_SRC sh
 wget http://downloads.sourceforge.net/tmux/tmux-1.9a.tar.gz
 #+END_SRC
+或者本地下载：[[software/tmux-1.9a.tar.gz][tmux-1.9a.tar.gz]]
 
 注意编译时参数：
 #+BEGIN_SRC sh
