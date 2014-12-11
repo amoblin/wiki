@@ -2,6 +2,8 @@
 
 ## 开发工具配置
 * [Git指南](/it/git-guide)
+* [版本控制规范](./version-control)
+* [Git Flow备忘清单](/it/git-flow-cheetsheet/index.zh_CN.html)
 
 ### Linux用户
 * [命令行配置指南](/it/commandline-tools)
@@ -17,7 +19,6 @@
 
 ## [数据接口](api)
 * [API文档](api.html)
-* [API文档生成工具配置](api/how-to-generate-api-doc)
 
 ## [iOS](ios/)
 * [iOS开发配置](ios/ios-dev)
