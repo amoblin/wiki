@@ -49,6 +49,10 @@ sudo gem install gollum
 #+BEGIN_SRC sh
 gem install org-ruby
 #+END_SRC
+* 开机自启动
+#+BEGIN_SRC sh
+sudo su - git -c "gollum ~/websites/wiki&"
+#+END_SRC
 * 参考
 - https://ruby.taobao.org
 - https://github.com/gollum/gollum

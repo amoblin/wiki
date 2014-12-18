@@ -1,0 +1,28 @@
+#+TITLE: gollum-guide
+#+AUTHOR: amoblin
+#+EMAIL: amoblin@gmail.com
+#+DATE: 2014-12-18 11:56:44
+#+OPTIONS: ^:{}
+
+#+REVEAL_ROOT: /media/lib/reveal.js-2.6.2
+#+REVEAL_TRANS: linear
+#+REVEAL_THEME: moon
+
+Gollum是一款基于Git的Wiki系统，由Github开发，最初在Github中作为仓库的wiki使用，随着发展，Gollum已经独立成一个完善的Wiki系统。
+
+Gollum支持如下格式的轻量级标记语言：
+
+- AsciiDoc
+- Creole
+- Markdown
+- MediaWiki
+- Org-mode
+- Plain Text
+- Pod
+- RDoc
+- reStructuredText
+- Textile
+
+* 参考
+- http://www.yangzhiping.com/tech/gollum.html
+- http://weblog.momoka.eu/2012/06/wiki-switched-to-gollum.html
