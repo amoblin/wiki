@@ -8,3 +8,6 @@
 
 default:
 	aglio -t templates/default.jade -i api.apib -o ../api.html
+
+demo:
+	aglio -t templates/default.jade -i example-cn.apib -o example-cn.html

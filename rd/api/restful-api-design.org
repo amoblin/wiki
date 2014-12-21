@@ -1,0 +1,26 @@
+#+TITLE: restful-api-design
+#+AUTHOR: amoblin
+#+EMAIL: amoblin@gmail.com
+#+DATE: 2014-12-20 08:07:03
+#+OPTIONS: ^:{}
+
+#+REVEAL_ROOT: /media/lib/reveal.js-2.6.2
+#+REVEAL_TRANS: linear
+#+REVEAL_THEME: moon
+
+* 认证信息
+
+* 新建资源
+后面带上 */new* 更加直观
+
+* 
+
+* 分页
+分页参数
+
+* 参考
+- http://jsonapi.org.cn
+- [[https://dev.twitter.com/rest/reference/post/direct_messages/new][Twitter REST APIs]]
+- http://segmentfault.com/q/1010000000603084
+- http://segmentfault.com/q/1010000000610275
+- https://parse.com/docs/rest#objects-retrieving

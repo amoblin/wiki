@@ -92,4 +92,5 @@
 
 # 参考资料
 - [Markdown 语法说明](http://wowubuntu.com/markdown/)
+- http://chenhm.com/slides/markdown/markdown.html#1
 - http://www.yangzhiping.com/tech/markdown-ecosystem.html

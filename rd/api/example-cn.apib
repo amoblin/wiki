@@ -1,0 +1,267 @@
+FORMAT: 1A
+HOST: https://api.mywebsite.com
+
+# API 标题
+[Markdown](http://daringfireball.net/projects/markdown/syntax) **格式的** 描述
+
+## 副标题
+仍是 Markdown *格式*. This also includes automatic "smartypants" formatting -- hooray!
+
+> "A quote from another time and place"
+
+Another paragraph. 代码示例：
+
+```http
+Authorization: bearer 5262d64b892e8d4341000001
+```
+
+不带高亮的代码示例：
+
+```no-highlight
+Foo bar baz
+```
+
+<!-- include(example-include.md) -->
+
+# Group 笔记
+一些介绍信息 (also with *Markdown*)
+
+## 笔记列表 [/notes]
+笔记列表描述
+
++ Even
++ More
++ Markdown
+
++ Model
+
+    + Headers
+
+            Content-Type: application/json
+            X-Request-ID: f72fc914
+            X-Response-Time: 4ms
+
+    + Body
+
+            [
+                {
+                    "id": 1,
+                    "title": "Grocery list",
+                    "body": "Buy milk"
+                },
+                {
+                    "id": 2,
+                    "title": "TODO",
+                    "body": "Fix garage door"
+                }
+            ]
+
+### 获取笔记列表 [GET]
+获取到一组笔记
+
++ Response 200
+
+    [笔记列表][]
+
+### 创建新笔记 [POST]
+创建一条新的笔记
+
++ Request
+
+    + Headers
+
+            Content-Type: application/json
+
+    + Body
+
+            {
+                "title": "My new note",
+                "body": "..."
+            }
+
++ Response 201
+
++ Response 400
+
+    + Headers
+
+            Content-Type: application/json
+
+    + Body
+
+            {
+                "error": "Invalid title"
+            }
+
+## 笔记 [/notes/{id}]
+笔记描述
+
++ Parameters
+
+    + id (required, string, `68a5sdf67`) ... The note ID
+
++ Model
+
+    + Headers
+
+            Content-Type: application/json
+            X-Request-ID: f72fc914
+            X-Response-Time: 4ms
+
+    + Body
+
+            {
+                "id": 1,
+                "title": "Grocery list",
+                "body": "Buy milk"
+            }
+
+### 获取笔记 [GET]
+获取单个笔记
+
++ Response 200
+
+    [笔记][]
+
++ Response 404
+
+    + Headers
+
+            Content-Type: application/json
+            X-Request-ID: f72fc914
+            X-Response-Time: 4ms
+
+    + Body
+
+            {
+                "error": "Note not found"
+            }
+
+### 更新一条笔记 [PUT]
+更新单个笔记
+
++ Request
+
+    + Headers
+
+            Content-Type: application/json
+
+    + Body
+
+            {
+                "title": "Grocery List (Safeway)"
+            }
+
++ Response 200
+
+    [笔记][]
+
++ Response 404
+
+    + Headers
+
+            Content-Type: application/json
+            X-Request-ID: f72fc914
+            X-Response-Time: 4ms
+
+    + Body
+
+            {
+                "error": "Note not found"
+            }
+
+### 删除一条笔记 [DELETE]
+删除单个笔记
+
++ Response 204
+
++ Response 404
+
+    + Headers
+
+            Content-Type: application/json
+            X-Request-ID: f72fc914
+            X-Response-Time: 4ms
+
+    + Body
+
+            {
+                "error": "Note not found"
+            }
+
+# Group 用户
+组介绍
+
+## 用户列表 [/users{?name,joinedBefore,joinedAfter,sort,limit}]
+用户的列表
+
++ Parameters
+
+    + name (optional, string, `alice`) ... Search for a user by name
+    + joinedBefore (optional, string, `2011-01-01`) ... Search by join date
+    + joinedAfter (optional, string, `2011-01-01`) ... Search by join date
+    + sort = `name` (optional, string, `joined`) ... Which field to sort by
+
+        + Values
+            + `name`
+            + `joined`
+            + `-joined`
+            + `age`
+            + `-age`
+            + `location`
+            + `-location`
+            + `plan`
+            + `-plan`
+
+    + limit = `10` (optional, integer, `25`) ... The maximum number of users to return, up to `50`
+
++ Model
+
+    + Headers
+
+            Content-Type: application/json
+
+    + Body
+
+            [
+                {
+                    "name": "alice",
+                    "image": "http://foo.com/alice.jpg",
+                    "joined": "2013-11-01"
+                },
+                {
+                    "name": "bob",
+                    "image": "http://foo.com/bob.jpg",
+                    "joined": "2013-11-02"
+                }
+            ]
+
+    + Schema
+
+            <!-- include(example-schema.json) -->
+
+### 获取用户 [GET]
+Get a list of users. Example:
+
+```no-highlight
+https://api.mywebsite.com/users?sort=joined&limit=5
+```
+
++ Response 200
+
+    [用户列表][]
+
+# Group Tags and Tagging Long Title
+Get or set tags on notes
+
+## GET /tags
+Get a list of bars
+
++ Response 200
+
+## Get one tag [/tags/{id}]
+Get a single tag
+
+### GET
+
++ Response 200
