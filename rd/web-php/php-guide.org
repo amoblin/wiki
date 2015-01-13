@@ -1,0 +1,118 @@
+#+TITLE: php-guide
+#+AUTHOR: amoblin
+#+EMAIL: amoblin@gmail.com
+#+DATE: 2015-01-04 21:51:39
+#+OPTIONS: ^:{}
+
+#+REVEAL_ROOT: /media/lib/reveal.js-2.6.2
+#+REVEAL_TRANS: linear
+#+REVEAL_THEME: moon
+
+* OSX下配置PHP和Nginx
+** 自定义安装php
+#+BEGIN_SRC sh
+brew install php56 --with-pgsql --with-mysql --with-fpm --without-apache
+#+END_SRC
+
+** 配置php-fpm
+复制一份默认配置
+#+BEGIN_SRC sh
+cp /usr/local/etc/php/5.6/php-fpm.conf{.default,}
+#+END_SRC
+
+修改。
+
+** 配置nginx
+复制一份默认配置
+#+BEGIN_SRC sh
+cp /usr/local/etc/nginx/nginx.conf{.default,}
+#+END_SRC
+修改。
+
+启动nginx：
+
+#+BEGIN_SRC sh
+sudo nginx
+#+END_SRC
+** 参考
+- http://infong.net/mac-install-nginx-php_fpm-mysql/
+- http://dhq.me/mac-install-nginx-mysql-php-fpm
+
+* CentOS 6.5下部署MySQL PHP和Nginx
+** 升级MySQL到5.6
+#+BEGIN_SRC sh
+rpm -Uvh http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
+rpm -Uvh http://rpms.famillecollet.com/enterprise/remi-release-6.rpm
+rpm -Uvh http://dev.mysql.com/get/mysql-community-release-el6-5.noarch.rpm
+rpm -Uvh http://nginx.org/packages/centos/6/noarch/RPMS/nginx-release-centos-6-0.el6.ngx.noarch.rpm
+#+END_SRC
+
+
+#+BEGIN_SRC sh
+yum -y --enablerepo=mysql56-community,remi install php-fpm
+yum -y --enablerepo=mysql56-community,remi install php-mysqlnd
+yum -y --enablerepo=mysql56-community,remi install mysql-server
+yum -y --enablerepo=nginx install nginx
+#+END_SRC
+** 安装php-fpm和nginx
+http://www.servermule.com.au/help/linux/install-lemp-mysql-5-6-centos-6/
+** 安装php memcache模块
+#+BEGIN_SRC sh
+sudo yum install php-pecl-memcache
+#+END_SRC
+修改 /etc/php.ini，添加
+#+BEGIN_SRC sh
+extesion=memcache.so
+#+END_SRC
+
+* 安装
+** 安装PHP
+https://github.com/Homebrew/homebrew-php
+#+BEGIN_SRC 
+brew tap homebrew/dupes
+brew tap homebrew/versions
+brew tap homebrew/homebrew-php
+brew install php56
+#+END_SRC
+** 安装composer
+OSX下
+#+BEGIN_SRC sh
+brew install composer
+#+END_SRC
+*nix下：
+#+BEGIN_SRC sh
+curl -sS https://getcomposer.org/installer | php
+#+END_SRC
+
+安装后，需要更新composer
+#+BEGIN_SRC sh
+composer self-update
+#+END_SRC
+否则使用时会出现如下的错误
+#+BEGIN_SRC sh
+PHP Fatal error: Allowed memory size of 536870912 bytes exhausted (tried to allocte 32 bytes) in phar:///usr/local/Cellar/composer/1.0.0-alpha8/libexec/composer.phar/src/Composer/DependencyResolver/RuleWatchGraph.php on line 52
+#+END_SRC
+* 安装laravel
+#+BEGIN_SRC sh
+composer global require "laravel/installer=~1.1"
+#+END_SRC
+* 安装YII
+http://www.yiiframework.com/doc-2.0/guide-start-installation.html
+#+BEGIN_SRC sh
+composer global require "fxp/composer-asset-plugin:1.0.0-beta4"
+composer create-project --prefer-dist yiisoft/yii2-app-basic basic
+#+END_SRC
+* 使用composer初始化YII项目
+** 安装composer asset plugin
+#+BEGIN_SRC sh
+php composer.phar global require "fxp/composer-asset-plugin:1.0.0-beta4"
+#+END_SRC
+** 通过composer安装Yii
+- 安装基本版
+#+BEGIN_SRC sh
+php composer.phar create-project yiisoft/yii2-app-basic basic 2.0.1
+#+END_SRC
+- 安装高级版
+#+BEGIN_SRC sh
+php composer.phar create-project yiisoft/yii2-app-advanced advanced 2.0.1
+#+END_SRC

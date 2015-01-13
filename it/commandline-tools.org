@@ -9,6 +9,19 @@
 #+BEGIN_SRC sh
 yum install zsh
 #+END_SRC
+** 设置默认shell为zsh
+#+BEGIN_SRC sh
+chsh -s `which zsh`
+#+END_SRC
+
+如果报错：chsh: /usr/local/bin/zsh: non-standard shell
+那么先将 /usr/local/bin/zsh 加入到 /etc/shells 中
+
+chsh -s其实修改的就是/etc/passwd文件里和你的用户名相对应的那一行。
+
+http://blog.yuaz.net/archives/292
+http://roclinux.cn/?p=739
+
 ** 配置使用oh-my-zsh
 https://github.com/robbyrussell/oh-my-zsh
 #+BEGIN_SRC sh
