@@ -1,0 +1,49 @@
+#+TITLE: 科学上网
+#+AUTHOR: amoblin
+#+EMAIL: amoblin@gmail.com
+#+DATE: 2015-01-10 14:04:33
+#+OPTIONS: ^:{}
+
+#+REVEAL_ROOT: /media/lib/reveal.js-2.6.2
+#+REVEAL_TRANS: linear
+#+REVEAL_THEME: moon
+
+* VPS上搭建VPN
+检测是否符合pptp的搭建环境的要求
+#+BEGIN_SRC sh
+modprobe ppp-compress-18 && echo ok
+#+END_SRC
+
+安装openvpn：
+#+BEGIN_SRC sh
+yum install openvpn
+#+END_SRC
+
+http://www.cryse.org/centos7-openvpn/
+
+http://www.deepvps.com
+
+http://www.dabu.info/centos6-4-structures-pptp-vpn.html
+
+http://zyan.cc/pptp_vpn/
+
+
+* VPN服务
+- [[https://www.astrill.com/][Astrill]]
+- [[https://www.vcup136.com/][VPNCup]]
+- [[http://www.geek-vpn.biz][Geek VPN]]
+- [[https://www.flyvpn.com/cn/How-To-Install-VPN-Profile-On-Mac-OS.html][Fly VPN]]
+$10/月
+- [[https://getqujing.com/zh-CN][曲径]]
+25元/月：
+- [[http://xiegongji.cn/][谢公屐]]
+25元/月：4设备，20GB
+- [[https://www.yunti.me/][云梯]]
+180元/年：2设备
+- [[https://www.djjsq.com/portal.php][豆荚]]
+支持按流量计费
+** 免费VPN
+- [[http://www.vpngate.net/cn]]
+* Chrome插件
+- [[http://honx.in/i/U7JbRYKo13vu6TsJ][红杏]]
+- [[https://hola.org/][Hola]]

@@ -56,6 +56,11 @@ fi
 #+END_SRC
 
 参考： http://blog.linuxeye.com/323.html
+** 基本使用
+| 绑定 | 功能      |
+|------+-----------|
+| ,    | 重命名tab |
+
 * 系统工具配置
 #+BEGIN_SRC sh
 git clone https://github.com/amoblin/MyDotFiles

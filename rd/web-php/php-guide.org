@@ -56,6 +56,7 @@ yum -y --enablerepo=nginx install nginx
 #+END_SRC
 ** 安装php-fpm和nginx
 http://www.servermule.com.au/help/linux/install-lemp-mysql-5-6-centos-6/
+
 ** 安装php memcache模块
 #+BEGIN_SRC sh
 sudo yum install php-pecl-memcache
@@ -115,4 +116,12 @@ php composer.phar create-project yiisoft/yii2-app-basic basic 2.0.1
 - 安装高级版
 #+BEGIN_SRC sh
 php composer.phar create-project yiisoft/yii2-app-advanced advanced 2.0.1
+#+END_SRC
+* MySQL
+** mysqld dead but subsys locked
+#+BEGIN_SRC sh
+cp /var/lock/subsys/mysqld /root/mysqld
+sudo rm /var/lock/subsys/mysqld
+sudo service mysqld stop
+sudo service httpd stop
 #+END_SRC
