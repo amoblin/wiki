@@ -21,6 +21,7 @@
 * [Wiki系统介绍](it/gollum-guide)
 * [Markdown指南](it/markdown-guide)
 * [科学上网，访问不能正常访问的网站](it/switchy-sharp/)
+* [常用软件下载](it/Software)
 
 ----------------------
 
