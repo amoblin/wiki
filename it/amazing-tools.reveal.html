@@ -1,0 +1,616 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title><img src="./amazing-tools/0.jpg" alt="0.jpg" /></title>
+<link rel="stylesheet" href="/.media/lib/reveal.js-2.6.2/css/reveal.min.css"/>
+<link rel="stylesheet" href="/.media/lib/reveal.js-2.6.2/css/theme/white-red.css" id="theme"/>
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = '/.media/lib/reveal.js-2.6.2/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section>
+<h1><img src="./amazing-tools/0.jpg" alt="0.jpg" /></h1>
+<h2></h2>
+<h2><a href="mailto:"></a></h2>
+<h2></h2></section>
+<section>
+<h2>Table of Contents</h2><ul>
+<li>
+<a href="#sec-1">POSIX</a>
+</li>
+<li>
+<a href="#sec-2">Readline</a>
+</li>
+<li>
+<a href="#sec-3">Zsh</a>
+</li>
+<li>
+<a href="#sec-4">Vim/Emacs</a>
+</li>
+<li>
+<a href="#sec-5">Git</a>
+</li>
+<li>
+<a href="#sec-6">Screen/Tmux</a>
+</li>
+<li>
+<a href="#sec-7">Markdown/Org</a>
+</li>
+<li>
+<a href="#sec-8">Gollum</a>
+</li>
+<li>
+<a href="#sec-9">Make/Rake</a>
+</li>
+<li>
+<a href="#sec-10">Package Manager</a>
+</li>
+<li>
+<a href="#sec-11">Blog</a>
+</li>
+<li>
+<a href="#sec-12">Community</a>
+</li>
+<li>
+<a href="#sec-13">About Me</a>
+</li>
+<li>
+<a href="#sec-14">Q&amp;A</a>
+</li>
+</ul>
+</section>
+
+<section>
+<section id="sec-1" >
+
+<h2>POSIX</h2>
+</section>
+</section>
+<section>
+<section id="sec-2" >
+
+<h2>Readline</h2>
+</section>
+<section id="sec-2-1" >
+
+<h3><img src="./amazing-tools/1.png" alt="1.png" /></h3>
+<p>
+<img src="./amazing-tools/2.png" alt="2.png" />
+<img src="./amazing-tools/4.png" alt="4.png" />
+</p>
+</section>
+<section id="sec-2-2" >
+
+<h3>通用快捷键</h3>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="left" />
+
+<col  class="left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="left">快捷键</th>
+<th scope="col" class="left">功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="left">Ctrl-a</td>
+<td class="left">移动光标到行首</td>
+</tr>
+
+<tr>
+<td class="left">Ctrl-e</td>
+<td class="left">移动光标到行尾</td>
+</tr>
+
+<tr>
+<td class="left">Ctrl-b</td>
+<td class="left">移动光标到前一个字符</td>
+</tr>
+
+<tr>
+<td class="left">Ctrl-f</td>
+<td class="left">移动光标到后一个字符</td>
+</tr>
+
+<tr>
+<td class="left">Ctrl-h</td>
+<td class="left">删除光标前字符</td>
+</tr>
+
+<tr>
+<td class="left">Ctrl-d</td>
+<td class="left">删除光标后字符</td>
+</tr>
+
+<tr>
+<td class="left">Ctrl-k</td>
+<td class="left">删除到行尾</td>
+</tr>
+</tbody>
+</table>
+
+</section>
+<section id="sec-2-3" >
+
+<h3>Readline Shortcuts</h3>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="left" />
+
+<col  class="left" />
+
+<col  class="left" />
+
+<col  class="left" />
+
+<col  class="left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="left">Ctrl-b</td>
+<td class="left">Move the cursor</td>
+<td class="left">one character</td>
+<td class="left">⇦ to the left</td>
+<td class="left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="left">Ctrl-f</td>
+<td class="left">Move the cursor</td>
+<td class="left">one character</td>
+<td class="left">⇨ to the right</td>
+<td class="left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="left">Alt-b</td>
+<td class="left">Move the cursor</td>
+<td class="left">one word</td>
+<td class="left">⇦ to the left</td>
+<td class="left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="left">Alt-f</td>
+<td class="left">Move the cursor</td>
+<td class="left">one word</td>
+<td class="left">⇨ to the right</td>
+<td class="left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="left">Ctrl-a</td>
+<td class="left">Move the cursor</td>
+<td class="left">&#xa0;</td>
+<td class="left">⇤ to the start of the line</td>
+<td class="left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="left">Ctrl-e</td>
+<td class="left">Move the cursor</td>
+<td class="left">&#xa0;</td>
+<td class="left">⇥ to the end of the line</td>
+<td class="left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="left" />
+
+<col  class="left" />
+
+<col  class="left" />
+
+<col  class="left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="left">Ctrl-d</td>
+<td class="left">Delete</td>
+<td class="left">the character</td>
+<td class="left">underneath the cursor</td>
+</tr>
+
+<tr>
+<td class="left">Ctrl-u</td>
+<td class="left">Delete</td>
+<td class="left">everything</td>
+<td class="left">⇤ from the cursor back to the line start</td>
+</tr>
+
+<tr>
+<td class="left">Ctrl-k</td>
+<td class="left">Delete</td>
+<td class="left">everything</td>
+<td class="left">⇥ from the cursor to the end of the line</td>
+</tr>
+
+<tr>
+<td class="left">Alt-d</td>
+<td class="left">Delete</td>
+<td class="left">word</td>
+<td class="left">⇨ untill before the next word boundary</td>
+</tr>
+
+<tr>
+<td class="left">Ctrl-w</td>
+<td class="left">Delete</td>
+<td class="left">word</td>
+<td class="left">⇦ untill after the previous word boundary</td>
+</tr>
+
+<tr>
+<td class="left">Ctrl-y</td>
+<td class="left">Yank/Paste</td>
+<td class="left">prev. killed text</td>
+<td class="left">at the cursor position</td>
+</tr>
+
+<tr>
+<td class="left">Alt-y</td>
+<td class="left">Yank/Paste</td>
+<td class="left">prev. prev. killed text</td>
+<td class="left">at the cursor position</td>
+</tr>
+</tbody>
+</table>
+
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="left" />
+
+<col  class="left" />
+
+<col  class="left" />
+
+<col  class="left" />
+
+<col  class="left" />
+
+<col  class="left" />
+
+<col  class="left" />
+
+<col  class="left" />
+
+<col  class="left" />
+
+<col  class="left" />
+
+<col  class="left" />
+
+<col  class="left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="left">Ctrl-p</td>
+<td class="left">Move in history</td>
+<td class="left">one line</td>
+<td class="left">⇧</td>
+<td class="left">before</td>
+<td class="left">this</td>
+<td class="left">line</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="left">Ctrl-n</td>
+<td class="left">Move in history</td>
+<td class="left">one line</td>
+<td class="left">⇩</td>
+<td class="left">after</td>
+<td class="left">this</td>
+<td class="left">line</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="left">Alt-&gt;</td>
+<td class="left">Move in history</td>
+<td class="left">all the lines</td>
+<td class="left">⇩</td>
+<td class="left">to</td>
+<td class="left">the</td>
+<td class="left">line</td>
+<td class="left">currently</td>
+<td class="left">being</td>
+<td class="left">entered</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="left">Ctrl-r</td>
+<td class="left">Incrementally search the line history</td>
+<td class="left">&#xa0;</td>
+<td class="left">⇧</td>
+<td class="left">backwardly</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="left">Ctrl-s</td>
+<td class="left">Incrementally search the line history</td>
+<td class="left">&#xa0;</td>
+<td class="left">⇩</td>
+<td class="left">forwardly</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="left">Ctrl-J</td>
+<td class="left">End an incremental search</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="left">Ctrl-G</td>
+<td class="left">Abort an incremental search</td>
+<td class="left">and</td>
+<td class="left">restore</td>
+<td class="left">the</td>
+<td class="left">original</td>
+<td class="left">line</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="left">Alt-Ctrl-y</td>
+<td class="left">Yank/Paste</td>
+<td class="left">arg.    1            of</td>
+<td class="left">prev.</td>
+<td class="left">cmnd</td>
+<td class="left">at</td>
+<td class="left">the</td>
+<td class="left">cursor</td>
+<td class="left">position</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="left">Alt-.</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="left">Alt-_</td>
+<td class="left">Yank/Paste</td>
+<td class="left">last    arg          of</td>
+<td class="left">prev.</td>
+<td class="left">cmnd</td>
+<td class="left">at</td>
+<td class="left">the</td>
+<td class="left">cursor</td>
+<td class="left">position</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+
+<ul class="org-ul">
+<li><a href="http://www.bigsmoke.us/readline/shortcuts">http://www.bigsmoke.us/readline/shortcuts</a>
+</li>
+<li><a href="http://www.cnblogs.com/bamanzi/archive/2013/04/15/clink-windows-cmd-readline.html">clink: 让Windows Cmd拥有readline能力</a>
+</li>
+</ul>
+</section>
+</section>
+<section>
+<section id="sec-3" >
+
+<h2>Zsh</h2>
+</section>
+
+</section>
+<section>
+<section id="sec-4" >
+
+<h2>Vim/Emacs</h2>
+</section>
+</section>
+<section>
+<section id="sec-5" >
+
+<h2>Git</h2>
+</section>
+<section id="sec-5-1" >
+
+<h3>Gitolite</h3>
+</section>
+</section>
+<section>
+<section id="sec-6" >
+
+<h2>Screen/Tmux</h2>
+</section>
+
+</section>
+<section>
+<section id="sec-7" >
+
+<h2>Markdown/Org</h2>
+</section>
+</section>
+<section>
+<section id="sec-8" >
+
+<h2>Gollum</h2>
+</section>
+</section>
+<section>
+<section id="sec-9" >
+
+<h2>Make/Rake</h2>
+</section>
+</section>
+<section>
+<section id="sec-10" >
+
+<h2>Package Manager</h2>
+<p>
+Yum, Aptitude, NPM, Composer, Gem, easy_install/pip, CocoaPods, Bower
+</p>
+</section>
+</section>
+<section>
+<section id="sec-11" >
+
+<h2>Blog</h2>
+</section>
+</section>
+<section>
+<section id="sec-12" >
+
+<h2>Community</h2>
+<p>
+Github, Google code, StackOverflow, V2EX
+</p>
+</section>
+</section>
+<section>
+<section id="sec-13" >
+
+<h2>About Me</h2>
+<ul class="org-ul">
+<li>微博：<a href="http://weibo.com/101049672">@amoblin</a>
+</li>
+<li>Twitter：<a href="https://twitter.com/amoblin">@amoblin</a>
+</li>
+<li>Email: <a href="mailto:amoblin@gmail.com">amoblin@gmail.com</a>
+</li>
+<li><a href="https://github.com/amoblin">https://github.com/amoblin</a>
+</li>
+<li>Homepage: <a href="http://marboo.biz">http://marboo.biz</a>
+</li>
+</ul>
+</section>
+</section>
+<section>
+<section id="sec-14" >
+
+<h2>Q&amp;A</h2>
+<img src="./amazing-tools/qrcode.png" alt="qrcode.png" />
+</section>
+</section>
+</div>
+</div>
+<script src="/.media/lib/reveal.js-2.6.2/lib/js/head.min.js"></script>
+<script src="/.media/lib/reveal.js-2.6.2/js/reveal.min.js"></script>
+<script>
+
+        		// Full list of configuration options available here:
+        		// https://github.com/hakimel/reveal.js#configuration
+        		Reveal.initialize({
+        			controls: true,
+        			progress: true,
+        			history: false,
+        			center: true,
+                                slideNumber: true,
+        			rollingLinks: false,
+        			keyboard: true,
+        			overview: true,
+        			 // slide width
+        			 // slide height
+        			 // slide margin
+        			 // slide minimum scaling factor
+        			 // slide maximum scaling factor
+
+
+        			theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        			transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
+        			transitionSpeed: 'default',
+
+        			// Optional libraries used to extend on reveal.js
+        			dependencies: [
+        				{ src: '/.media/lib/reveal.js-2.6.2/lib/js/classList.js', condition: function() { return !document.body.classList; } }
+        				,{ src: '/.media/lib/reveal.js-2.6.2/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } }
+        				,{ src: '/.media/lib/reveal.js-2.6.2/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } }
+        				,{ src: '/.media/lib/reveal.js-2.6.2/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        				,{ src: '/.media/lib/reveal.js-2.6.2/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } }
+        				,{ src: '/.media/lib/reveal.js-2.6.2/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+        				// { src: '/.media/lib/reveal.js-2.6.2/plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
+        				// { src: '/.media/lib/reveal.js-2.6.2/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+         				
+        			]
+        		});
+</script>
+</body>
+</html>
