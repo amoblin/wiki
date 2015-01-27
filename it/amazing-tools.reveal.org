@@ -1,8 +1,8 @@
-#+TITLE: [[./amazing-tools/0.jpg]]
+#+TITLE: 磨刀
 #+AUTHOR: 
 #+EMAIL: 
 # #+DATE: 2015-01-16 06:48:53
-#+OPTIONS: ^:{} num:nil email:nil toc:1
+#+OPTIONS: ^:{} num:nil email:nil toc:nil
 
 #+REVEAL_ROOT: http://cdn.bootcss.com/reveal.js/2.6.2/
 #+REVEAL_ROOT: http://wiki.marboo.biz/media/reveal.js-2.6.2
@@ -12,7 +12,12 @@
 #+REVEAL-SLIDE-NUMBER: t
 #+ATTR_REVEAL: 
 
+# ** [[./amazing-tools/0.jpg]]
 * POSIX
+** Terminal
+[[http://ohmyz.sh/img/themes/nebirhos.jpg]]
+** Babun
+[[https://raw.githubusercontent.com/babun/babun.github.io/master/images/screen_vim.png]]
 * Readline
 ** [[./amazing-tools/1.png]]
 [[./amazing-tools/2.png]]
@@ -67,13 +72,23 @@
 * Vim/Emacs
 * Git
 ** Gitolite
+** Git Flow
 * Screen/Tmux
-
+[[./amazing-tools/5.png]]
 * Markdown/Org
 * Gollum
 * Make/Rake
 * Package Manager
-Yum, Aptitude, NPM, Composer, Gem, easy_install/pip, CocoaPods, Bower
+- Yum
+- Aptitude
+- pact
+- NPM
+- Composer
+- Gem
+- easy_install/pip
+- CocoaPods
+- Bower
+- ...
 * Blog
 * Community
 Github, Google code, StackOverflow, V2EX
