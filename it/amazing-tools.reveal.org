@@ -5,6 +5,7 @@
 #+OPTIONS: ^:{} num:nil email:nil toc:1
 
 #+REVEAL_ROOT: http://cdn.bootcss.com/reveal.js/2.6.2/
+#+REVEAL_ROOT: http://wiki.marboo.biz/media/reveal.js-2.6.2
 # #+REVEAL_ROOT: /.media/lib/reveal.js-2.6.2
 #+REVEAL_TRANS: linear
 #+REVEAL_THEME: white-red
@@ -83,4 +84,4 @@ Github, Google code, StackOverflow, V2EX
 - [[https://github.com/amoblin]]
 - Homepage: [[http://marboo.biz]]
 * Q&A
-[[./amazing-tools/qrcode.png]]
+[[./amazing-tools/qrcode.svg]]
