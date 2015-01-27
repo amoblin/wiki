@@ -4,7 +4,8 @@
 # #+DATE: 2015-01-16 06:48:53
 #+OPTIONS: ^:{} num:nil email:nil toc:1
 
-#+REVEAL_ROOT: /.media/lib/reveal.js-2.6.2
+#+REVEAL_ROOT: http://cdn.bootcss.com/reveal.js/2.6.2/
+# #+REVEAL_ROOT: /.media/lib/reveal.js-2.6.2
 #+REVEAL_TRANS: linear
 #+REVEAL_THEME: white-red
 #+REVEAL-SLIDE-NUMBER: t
