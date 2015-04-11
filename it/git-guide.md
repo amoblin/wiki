@@ -1,5 +1,22 @@
 # Git 快速指南
 
+# 创建公私钥对
+
+Windows下首先下载安装[babun](http://babun.github.io/)，然后打开babun终端；
+
+Linux和OSX下直接打开终端即可。
+
+终端下输入下面命令来创建公私钥对。
+
+```
+ssh-key-gen -t rsa
+```
+一直回车，结束后把公钥文件 *id_rsa.pub* 提交给git库管理员，而私钥文件 *id_rsa* 不要移动，妥善保存。
+
+git库管理员告诉你git库地址，然后 git clone下来即可。
+
+
+
 # 参考资料
 - http://rogerdudler.github.io/git-guide/index.zh.html
 - http://marklodato.github.io/visual-git-guide/index-zh-cn.html

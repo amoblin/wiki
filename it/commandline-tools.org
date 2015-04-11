@@ -12,10 +12,14 @@ yum install zsh
 ** 设置默认shell为zsh
 #+BEGIN_SRC sh
 chsh -s `which zsh`
+
 #+END_SRC
 
 如果报错：chsh: /usr/local/bin/zsh: non-standard shell
-那么先将 /usr/local/bin/zsh 加入到 /etc/shells 中
+那么先将 /usr/local/bin/zsh 加入到 /etc/shells 中：
+#+BEGIN_SRC sh
+sudo sh -c "echo `which zsh` >> /etc/shells"
+#+END_SRC
 
 chsh -s其实修改的就是/etc/passwd文件里和你的用户名相对应的那一行。
 
@@ -27,9 +31,19 @@ https://github.com/robbyrussell/oh-my-zsh
 #+BEGIN_SRC sh
 curl -L http://install.ohmyz.sh | sh
 #+END_SRC
-** 额外配置
+** amoblin的额外配置
+#+BEGIN_SRC sh
+ln MyDotfiles/amoblin.zsh ~/.oh-my-zsh/custom
+ln MyDotfiles/amoblin.zsh-theme ~/.oh-my-zsh/theme
+ln MyDotFiles/_alias ~/.alias
+#+END_SRC
+
 * 使用Tmux 1.9a
-CentOS 6.5下默认tmux版本为1.6，不支持分屏功能，所以我们编译安装最新版本1.9a。
+CentOS 6.5下默认tmux版本为1.6，CentOS 7.0下默认为1.8，不支持分屏功能，所以我们编译安装最新版本1.9a。
+** 安装依赖
+#+BEGIN_SRC sh
+yum install -y ncurses-devel
+#+END_SRC
 ** 安装依赖libevent 2.0
 #+BEGIN_SRC sh
 wget https://github.com/downloads/libevent/libevent/libevent-2.0.21-stable.tar.gz
@@ -56,6 +70,10 @@ fi
 #+END_SRC
 
 参考： http://blog.linuxeye.com/323.html
+** amoblin的配置
+#+BEGIN_SRC sh
+ln MyDotFiles/_tmux.conf ~/.tmux.conf
+#+END_SRC
 ** 基本使用
 | 绑定 | 功能      |
 |------+-----------|

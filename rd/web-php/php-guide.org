@@ -10,10 +10,14 @@
 
 * OSX下配置PHP和Nginx
 ** 自定义安装php
+- 安装php，php-fpm和apache模块
 #+BEGIN_SRC sh
-brew install php56 --with-pgsql --with-mysql --with-fpm --without-apache
+brew install php56 --with-fpm --with-apache
 #+END_SRC
-
+- 安装apache 2.4
+#+BEGIN_SRC sh
+brew install httpd24
+#+END_SRC
 ** 配置php-fpm
 复制一份默认配置
 #+BEGIN_SRC sh
@@ -66,6 +70,17 @@ sudo yum install php-pecl-memcache
 extesion=memcache.so
 #+END_SRC
 
+* CentOS 7.0下部署MariaDB、PHP和Nginx
+#+BEGIN_SRC sh
+yum install httpd nginx php php-devel php-mbstring memcached redis mariadb-server mariadb
+yum install tmux eamcs git zsh
+#+END_SRC
+- http://technote.aven-network.com/576/centos-7-%E5%BF%AB%E9%80%9F%E8%A8%AD%E5%AE%9A-lamp%EF%BC%88linux-apache-mariadb-php%EF%BC%89
+* Windows 下部署Nginx和PHP
+- http://www.cnblogs.com/huayangmeng/archive/2011/06/15/2081337.html
+- https://github.com/Xeoncross/wnmp
+- http://sourceforge.net/projects/wtnmp/
+- https://eksith.wordpress.com/2010/11/07/nginx-php-mysql-windows/
 * 安装
 ** 安装PHP
 https://github.com/Homebrew/homebrew-php
@@ -106,18 +121,38 @@ composer create-project --prefer-dist yiisoft/yii2-app-basic basic
 * 使用composer初始化YII项目
 ** 安装composer asset plugin
 #+BEGIN_SRC sh
-php composer.phar global require "fxp/composer-asset-plugin:1.0.0-beta4"
+composer global require "fxp/composer-asset-plugin:1.0.0"
 #+END_SRC
-** 通过composer安装Yii
-- 安装基本版
+** 通过composer初始化骨架
+- 基本版骨架
 #+BEGIN_SRC sh
-php composer.phar create-project yiisoft/yii2-app-basic basic 2.0.1
+composer create-project --prefer-dist yiisoft/yii2-app-basic basic
 #+END_SRC
-- 安装高级版
+- 高级版骨架
 #+BEGIN_SRC sh
-php composer.phar create-project yiisoft/yii2-app-advanced advanced 2.0.1
+composer create-project --prefer-dist yiisoft/yii2-app-advanced yii-application
 #+END_SRC
+** basic和advanced的选择
+- http://blog.csdn.net/meegomeego/article/details/40182867
+* clong Yii项目
+** 安装依赖库
+#+BEGIN_SRC sh
+yum install -y php-mbstring
+#+END_SRC
+#+BEGIN_SRC sh
+composer install
+#+END_SRC
+
+* Yii2权威指南
+- http://www.yiichina.com/doc/guide/2.0
+- http://yii2.techbrood.com/
+- https://github.com/yiisoft/yii2/tree/master/docs/guide-zh-CN
+- 深入理解Yii2.0 http://www.digpage.com/install.html
 * MySQL
+** CentOS 7.0中 mariadb 取代 mysql
+#+BEGIN_SRC sh
+yum -y install mariadb-server mariadb
+#+END_SRC
 ** mysqld dead but subsys locked
 #+BEGIN_SRC sh
 cp /var/lock/subsys/mysqld /root/mysqld
@@ -125,3 +160,111 @@ sudo rm /var/lock/subsys/mysqld
 sudo service mysqld stop
 sudo service httpd stop
 #+END_SRC
+* Nginx转发到Apache VHost配置
+** Apache域名到vhost目录映射
+#+BEGIN_SRC httpd
+# for OSX
+#LoadModule php5_module /usr/libexec/apache2/libphp5.so
+# for centos
+LoadModule php5_module /usr/lib64/httpd/modules/libphp5.so
+AddType application/x-httpd-php .php
+AddType application/x-httpd-php-source .phps
+PHPIniDir /etc/php.ini
+
+<Directory />
+    Options FollowSymLinks
+    AllowOverride All
+    Require all granted
+#    Order deny,allow
+#    Deny from all
+</Directory>
+
+<IfModule dir_module>
+    DirectoryIndex index.php index.html
+</IfModule>
+
+<Directory "/var/vhost">
+    Options FollowSymLinks
+    AllowOverride All
+    Require all granted
+#    Order deny,allow
+#    Allow from all
+    Satisfy all
+</Directory>
+
+<Location />
+    SetOutputFilter DEFLATE
+    BrowserMatch ^Mozilla/4 gzip-only-text/html
+    BrowserMatch ^Mozilla/4\.0[678] no-gzip
+    BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+    SetEnvIfNoCase Request_URI \\.(?:gif|jpe?g|png|xml)$ no-gzip dont-vary
+    SetEnvIfNoCase Request_URI .(?:exe|t?gz|zip|bz2|sit|rar)$ no-gzip dont-vary
+    SetEnvIfNoCase Request_URI .(?:pdf|mov|avi|mp3|mp4|rm|swf|flv)$ no-gzip dont-vary
+</Location>
+
+VirtualDocumentRoot /var/vhost/%2/%1
+#+END_SRC
+
+** nginx转发给Apache
+#+BEGIN_SRC sh
+# vi /etc/nginx/nginx.conf
+#+END_SRC
+#+BEGIN_SRC nginx
+# NGiNX 负载均衡
+upstream backend {
+    server 127.0.0.1:81 weight=1 fail_timeout=30s;
+    server 127.0.0.1:82 weight=1 fail_timeout=30s;
+    server 127.0.0.1:83 weight=1 fail_timeout=30s;
+}
+server {
+    listen 80 default_server;
+    # 向后端服务器发起请求时添加指定的header头信息
+    proxy_set_header  Host $host;
+    # 向后端服务器发送真实 IP
+    proxy_set_header  X-Real-IP $remote_addr;
+    #让后端如php能直接通过变量获取真实IP
+    proxy_set_header  X-Forwarded-For $proxy_add_x_forwarded_for;
+    location / {
+        proxy_pass http://backend;
+    }
+}
+#+END_SRC
+
+- http://blog.aboutc.net/nginx/40/nginx-forwarded-to-apache
+* BeansTalk扩展安装
+http://kr.github.io/beanstalkd/
+#+BEGIN_SRC sh
+wget https://github.com/kr/beanstalkd/archive/v1.10.tar.gz
+git clone https://github.com/bergundy/libbeanstalkclient/
+git clone https://github.com/nil-zhang/php-beanstalk/
+ldconfig
+#+END_SRC
+
+** 启动beanstalk
+#+BEGIN_SRC sh
+beanstalkd -l127.0.0.1 -p11300
+#+END_SRC
+* WordPress安装
+- https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-on-centos-7
+* 问题解答
+** mkdir() Permission denied
+
+#+BEGIN_SRC sh
+chmod 777 assets/
+chmod 777 runtime/
+chmod 777 /web/assets/
+#+END_SRC
+
+** apache 2.4报403错
+使用
+#+BEGIN_SRC httpd
+    Require all granted
+#+END_SRC
+替换
+#+BEGIN_SRC httpd
+    Order deny,allow
+    Deny from all
+#+END_SRC
+即可。
+** 500 Internal Server Error
+首先检查php项目的配置文件是否存在

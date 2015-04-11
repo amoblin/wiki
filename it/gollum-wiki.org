@@ -56,3 +56,4 @@ sudo su - git -c "gollum ~/websites/wiki&"
 * 参考
 - https://ruby.taobao.org
 - https://github.com/gollum/gollum
+- http://www.yangzhiping.com/tech/gollum.html

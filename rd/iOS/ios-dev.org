@@ -22,12 +22,13 @@ gem install nomad-cli
 sudo gem install cocoapods
 #+END_SRC
 #+BEGIN_SRC sh
-pod init
+pod setup
 #+END_SRC
 * 安装Xcode插件
 http://www.cocoachina.com/applenews/devnews/2014/0506/8325.html
 ** Alcatraz 插件管理工具
 ** XVim
+** FuzzyAutocomplete 模糊匹配自动补全
 ** BBUFullIssueNavigator  为Issue Navigator处添加换行符
 ** XcodeColors   为调试控制台添加ANSI颜色支持
 ** XAlign 代码格式化

@@ -38,7 +38,7 @@ $10/月
 25元/月：
 - [[http://xiegongji.cn/][谢公屐]]
 25元/月：4设备，20GB
-- [[https://www.yunti.me/][云梯]]
+- [[https://www.tizicloud.com/][云梯]]
 180元/年：2设备
 - [[https://www.djjsq.com/portal.php][豆荚]]
 支持按流量计费
@@ -47,3 +47,23 @@ $10/月
 * Chrome插件
 - [[http://honx.in/i/U7JbRYKo13vu6TsJ][红杏]]
 - [[https://hola.org/][Hola]]
+* OpenWrt路由器
+支持OpenWrt无线路由器列表  http://wiki.openwrt.org/toh/start
+- 小米路由器
+http://www.mi.com/miwifimini/
+- 极路由
+http://www.hiwifi.com/
+
+http://item.jd.com/1184730.html
+
+- 小度路由
+http://link.baidu.com/
+
+** 测评
+- http://tech.sina.com.cn/zl/post/detail/t/2014-03-11/pid_8444357.htm
+- http://www.huxiu.com/article/32528/1.html
+- http://digi.ifeng.com/vs/special/duishou023/
+- http://www.zhihu.com/question/21973538
+- http://www.lieyunwang.com/archives/42343
+- http://blog.sina.com.cn/s/blog_77d6ec120102vb13.html
+
