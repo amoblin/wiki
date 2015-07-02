@@ -19,6 +19,10 @@
 分页参数
 
 * 参考
+- http://blog.luisrei.com/articles/rest.html
+- https://bourgeois.me/rest/
+- http://www.ruanyifeng.com/blog/2011/09/restful.html
+- http://v2ex.com/t/195751#reply9
 - http://jsonapi.org.cn
 - [[https://dev.twitter.com/rest/reference/post/direct_messages/new][Twitter REST APIs]]
 - http://segmentfault.com/q/1010000000603084

@@ -247,6 +247,25 @@ beanstalkd -l127.0.0.1 -p11300
 * WordPress安装
 - https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-on-centos-7
 * 问题解答
+** file not found 或者 Nginx 403
+文件路径权限问题
+** PHP Fatal error:  Class 'PDO' not found in
+
+** exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "site/error".'
+解决办法：
+config/main.php中增加如下内容：
+#+BEGIN_SRC sh
+'urlManager' => [
+'enablePrettyUrl' => true,
+'showScriptName' => false,
+],
+#+END_SRC
+** PHP Notice – yii\base\ErrorException Undefined offset: 1 in /Users/amoblin/Marboo/Projects/MyProjects/Movee/goClimb_web/vendor/yiisoft/yii2/web/UrlRule.php
+解决方法：是nginx、apache的配置问题，直接用nginx即可。
+** SQLSTATE[HY000] [2002] Can't connect to local MySQL server through socket
+配置文件中把localhost改为127.0.0.1即可。
+** apache配置问题
+注意在web下添加 .htaccess文件
 ** mkdir() Permission denied
 
 #+BEGIN_SRC sh
@@ -268,3 +287,9 @@ chmod 777 /web/assets/
 即可。
 ** 500 Internal Server Error
 首先检查php项目的配置文件是否存在
+** An Error occurred while handling another error:
+exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "site/error".' in /Users/amoblin/Marboo/Projects/MyProjects/BlogHub/vendor/yiisoft/yii2/base/Module.php:461
+
+解决方法：common/config/bootstrap.php中增加对应的模块配置即可。
+** 输入任何URL都在首页不变
+没有配置Pretty URL吧

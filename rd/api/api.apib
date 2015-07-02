@@ -19,11 +19,24 @@ HOST: http://api.marboo.biz
 
     + Body
 
-			{'status': 201,
-			'data': {},
-			'message': ""
-			}
+            {'status': 201,
+            'data': {},
+            'message': ""
+            }
 
+### 获取所有用户 [GET]
++ Parameters
+  + phone (required, string) ... 手机号
+
++ Response 200 (application/json)
+
+    + Body
+
+            {"status": 0,
+            "data": {},
+            "message": ""
+            }
+            
 ## 登陆 [/1/login]
 ### 已有用户登陆 [GET]
 + Parameters
@@ -34,14 +47,14 @@ HOST: http://api.marboo.biz
 
     + Body
 
-			{
-				"username": "cooldude6",
-				"phone": "415-392-0202",
-				"createdAt": "2011-11-07T20:58:34.448Z",
-			   	"updatedAt": "2011-11-07T20:58:34.448Z",
-	   			"objectId": "g7y9tkhB7O",
-				"sessionToken": "pnktnjyb996sj4p156gjtp4im"
-			}
+            {
+                "username": "cooldude6",
+                "phone": "415-392-0202",
+                "createdAt": "2011-11-07T20:58:34.448Z",
+                   "updatedAt": "2011-11-07T20:58:34.448Z",
+                   "objectId": "g7y9tkhB7O",
+                "sessionToken": "pnktnjyb996sj4p156gjtp4im"
+            }
 
 ## 密码设置 [/1/passwordReset]
 ### 更新密码 [POST]
@@ -53,10 +66,10 @@ HOST: http://api.marboo.biz
 
     + Body
 
-			{'status': 200,
-			'data': {},
-			'message': ""
-			}
+            {'status': 200,
+            'data': {},
+            'message': ""
+            }
 
 # Group 地址管理
 ## 收货地址设置 [/1/user/addresses]
@@ -66,10 +79,10 @@ HOST: http://api.marboo.biz
 
     + Body
 
-			{'status': 200,
-			'data': {},
-			'message': ""
-			}
+            {'status': 200,
+            'data': {},
+            'message': ""
+            }
 
 ### 新建收货地址 [POST]
 
@@ -77,39 +90,39 @@ HOST: http://api.marboo.biz
 
     + Body
 
-			{"createdAt": "2011-08-20T02:06:57.931Z",
-			 "objectId": "Ed1nuqPvcm"
-			}
+            {"createdAt": "2011-08-20T02:06:57.931Z",
+             "objectId": "Ed1nuqPvcm"
+            }
 
 ## 管理某个收货地址 [/1/user/address/:id]
 ### 获取某个收货地址 [GET]
 + Response 200 (application/json)
 
-	+ Body
+    + Body
 
-			{
-			"score": 1337,
-			"playerName": "Sean Plott",
-			"cheatMode": false,
-			"skills": [
-			"pwnage",
-			"flying"
-			],
-			"createdAt": "2011-08-20T02:06:57.931Z",
-			"updatedAt": "2011-08-20T02:06:57.931Z",
-			"objectId": "Ed1nuqPvcm"
-			}
-			
+            {
+            "score": 1337,
+            "playerName": "Sean Plott",
+            "cheatMode": false,
+            "skills": [
+            "pwnage",
+            "flying"
+            ],
+            "createdAt": "2011-08-20T02:06:57.931Z",
+            "updatedAt": "2011-08-20T02:06:57.931Z",
+            "objectId": "Ed1nuqPvcm"
+            }
+            
 ### 删除某个收货地址 [DELETE]
 
 + Response 200 (application/json)
 
     + Body
 
-			{'status': 200,
-			'data': {},
-			'message': ""
-			}
+            {'status': 200,
+            'data': {},
+            'message': ""
+            }
 
 ### 更新收货地址 [PUT]
 
@@ -117,9 +130,9 @@ HOST: http://api.marboo.biz
 
     + Body
 
-			{
-			"updatedAt": "2011-08-21T18:02:52.248Z"
-			}
+            {
+            "updatedAt": "2011-08-21T18:02:52.248Z"
+            }
 
 # Group 参考资源
 

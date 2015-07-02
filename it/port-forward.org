@@ -13,7 +13,7 @@
 预期目标：通过公网访问内网服务
 
 * 内网远程端口转发
-将内网22端口通过远程端口（公网本地端口）2222转发
+将内网22端口通过远程端口（公网本地端口）1234转发
 
 在内网服务器中执行如下命令：
 #+BEGIN_SRC sh
@@ -22,17 +22,17 @@ ssh -NR 2222:localhost:22 123.123.123.123
 
 有时网络不稳定导致连接失败，使用autossh来自动重连：
 #+BEGIN_SRC sh
-autossh -M 5000 -NR 2222:localhost:22 123.123.123.123
+autossh -M 5000 -f -NR 1234:localhost:22 123.123.123.123
 #+END_SRC
 
 * 公网端口本地转发
 在公网服务器中执行如下命令：
 #+BEGIN_SRC sh
-ssh -NL 123.123.123.123:2223:localhost:2222 123.123.123.123
+ssh -NL 0.0.0.0:1235:localhost:1234 123.123.123.123
 #+END_SRC
-* 开放2223端口
+* 开放1235端口
 #+BEGIN_SRC sh
-iptables -A INPUT -p tcp --dport 2223 -j ACCEPT
+iptables -A INPUT -p tcp --dport 1235 -j ACCEPT
 #+END_SRC
 * 参考资料：
 - http://blog.creke.net/722.html

@@ -22,3 +22,7 @@ https://www.cygwin.com/
 http://babun.github.io/
 
 [本地下载](./software/babun-1.0.1-dist.zip)
+
+## BTSync
+
+https://www.getsync.com/
