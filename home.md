@@ -1,5 +1,5 @@
 # Wiki不会忘记
-(本wiki Github地址： https://github.com/amoblin/wiki )
+(本wiki Github地址： <https://github.com/amoblin/wiki> )
 
 ## [产品](pd/)
 
