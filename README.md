@@ -6,6 +6,6 @@ Demo: http://wiki.marboo.biz
 
 Disable Search Engine Collect:
 
-```shell
+```
 mv {_,}robots.txt
 ```
