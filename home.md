@@ -23,6 +23,8 @@
 * [科学上网，访问不能正常访问的网站](it/switchy-sharp/)
 * [常用软件下载](it/Software)
 
+## [活跃贡献者](Top-Active-Contributors)
+
 ----------------------
 
 克隆Git库到本地

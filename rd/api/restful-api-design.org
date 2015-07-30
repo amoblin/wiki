@@ -8,6 +8,11 @@
 #+REVEAL_TRANS: linear
 #+REVEAL_THEME: moon
 
+* 快速指南
+- http://mp.weixin.qq.com/s?__biz=MzA3NDM0ODQwMw==&mid=208060670&idx=1&sn=ce67b8896985e8448137052b338093e0
+- https://sendgrid.com/blog/quickly-prototype-apis-apiary/
+- https://apiary.io/blueprint
+
 * 认证信息
 
 * 新建资源
